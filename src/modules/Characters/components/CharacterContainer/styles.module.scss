@@ -1,0 +1,15 @@
+@import "@/vars.css";
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  width: 100%;
+  cursor: pointer;
+  color: var(--text-color);
+  transition: 0.3s;
+  &:hover {
+    background-color: var(--additional-color1);
+  }
+  font-size: var(--text-main);
+}

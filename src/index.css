@@ -1,0 +1,20 @@
+@import "./vars.css";
+@import url("https://fonts.googleapis.com/css2?family=Nova+Square&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+main {
+  background-color: var(--main-color);
+  width: 100%;
+  min-height: 100vh;
+  font-family: "Nova Square", sans-serif;
+}
+
+button,
+input {
+  font-family: "Nova Square", sans-serif;
+}
