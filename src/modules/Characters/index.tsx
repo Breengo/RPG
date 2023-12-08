@@ -1,6 +1,6 @@
 import CharacterContainer from "./components/CharacterContainer";
 import CreateCharacter from "./components/CreateCharacter";
-import styles from "./index.module.scss";
+import styles from "./styles.module.scss";
 
 function Characters() {
   return (

@@ -13,13 +13,14 @@
 
 .nameInput {
   outline: none;
+  text-align: center;
   background-color: transparent;
   border: none;
   color: var(--text-color);
   font-size: var(--text-main);
   border-bottom: 1px solid var(--additional-color1);
   border-radius: 2px;
-  padding: 2px;
+  padding-bottom: 2px;
   width: 100%;
   margin-top: 2px;
 }
@@ -33,6 +34,7 @@
 }
 
 .propertyName {
+  text-align: center;
   font-size: var(--text-main);
   color: var(--text-color);
   width: 100px;

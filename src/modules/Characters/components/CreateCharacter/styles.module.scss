@@ -8,6 +8,7 @@
   cursor: pointer;
   color: var(--text-color);
   transition: 0.3s;
+  text-decoration: none;
   &:hover {
     background-color: var(--additional-color1);
   }

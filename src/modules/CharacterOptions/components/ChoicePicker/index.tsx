@@ -1,10 +1,10 @@
-import { CLASSES, RACES } from "../../../../data";
+import { CLASSES, Class, RACES, Race } from "../../../../data";
 import styles from "./styles.module.scss";
 
 interface Props {
   choiceList: typeof RACES | typeof CLASSES;
-  picked: number;
-  setPicked: (choice: number) => void;
+  picked: Class | Race;
+  setPicked: (choice: Class | Race) => void;
 }
 
 function ChoicePicker({ choiceList, setPicked, picked }: Props) {
@@ -13,8 +13,8 @@ function ChoicePicker({ choiceList, setPicked, picked }: Props) {
       {choiceList.map((choice, index) => (
         <li
           key={index}
-          onClick={() => setPicked(index)}
-          className={picked === index ? styles.active : ""}
+          onClick={() => setPicked(choice)}
+          className={picked.name === choice.name ? styles.active : ""}
         >
           {choice.name}
         </li>

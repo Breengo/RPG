@@ -1,11 +1,11 @@
-import React from "react";
 import ChoicePicker from "./components/ChoicePicker";
 import styles from "./styles.module.scss";
 import { CLASSES, RACES } from "../../data";
+import CharacterData from "../../store/store";
+import { observer } from "mobx-react-lite";
 
-function CharacterOptions() {
-  const [race, setRace] = React.useState(1);
-  const [pClass, setpClass] = React.useState(3);
+const CharacterOptions = observer(() => {
+  const characterData = CharacterData;
 
   return (
     <div className={styles.container}>
@@ -16,21 +16,25 @@ function CharacterOptions() {
 
       <div className={styles.propertyContainer}>
         <p className={styles.propertyName}>Race</p>
-        <ChoicePicker choiceList={RACES} picked={race} setPicked={setRace} />
+        <ChoicePicker
+          choiceList={RACES}
+          picked={characterData.race}
+          setPicked={characterData.setRace}
+        />
       </div>
 
       <div className={styles.propertyContainer}>
         <p className={styles.propertyName}>Class</p>
         <ChoicePicker
           choiceList={CLASSES}
-          picked={pClass}
-          setPicked={setpClass}
+          picked={characterData.class}
+          setPicked={characterData.setClass}
         />
       </div>
 
       <button className={styles.createBtn}>Create</button>
     </div>
   );
-}
+});
 
 export default CharacterOptions;
