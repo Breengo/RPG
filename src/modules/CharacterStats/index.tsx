@@ -1,40 +1,43 @@
+import { observer } from "mobx-react-lite";
+import CharacterData from "../../store/store";
 import styles from "./styles.module.scss";
 
-function CharacterStats() {
+const CharacterStats = observer(() => {
+  const data = CharacterData.getChar();
+
   return (
     <div className={styles.container}>
       <p>
-        Agile: <span>32</span>
+        Agile: <span>{data.agile}</span>
       </p>
       <p>
-        Strength: <span>32</span>
+        Strength: <span>{data.strength}</span>
       </p>
       <p>
-        Intelligence: <span>32</span>
+        Intelligence: <span>{data.intelligence}</span>
       </p>
       <p>
-        Armor: <span>32</span>
+        Armor: <span>{data.armor}</span>
       </p>
       <p>
-        Stamina: <span>32</span>
+        Stamina: <span>{data.stamina}</span>
       </p>
       <p>
-        Accuracy: <span>32</span>
+        Accuracy: <span>{data.accuracy}</span>
       </p>
       <p>
-        HP: <span>32</span>
+        HP: <span>{data.HP}</span>
       </p>
       <p>
-        Mana: <span>32</span>
+        Mana: <span>{data.mana}</span>
       </p>
       <p>
-        HP Regen: <span>32</span>
+        HP Regen: <span>{data.hpRegen}</span>
       </p>
       <p>
-        Mana Regen: <span>32</span>
+        Mana Regen: <span>{data.manaRegen}</span>
       </p>
     </div>
   );
-}
-
+});
 export default CharacterStats;
