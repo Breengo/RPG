@@ -1,9 +1,9 @@
 import { observer } from "mobx-react-lite";
-import CharacterData from "../../store/store";
 import styles from "./styles.module.scss";
+import CreationStore from "../../pages/CharacterCreation/store/CreationStore";
 
 const CharacterStats = observer(() => {
-  const data = CharacterData.getChar();
+  const data = CreationStore.getData();
 
   return (
     <div className={styles.container}>

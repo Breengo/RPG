@@ -7,7 +7,7 @@ interface Props {
   setPicked: (choice: Class | Race) => void;
 }
 
-function ChoicePicker({ choiceList, setPicked, picked }: Props) {
+const ChoicePicker = ({ choiceList, setPicked, picked }: Props) => {
   return (
     <ul className={styles.container}>
       {choiceList.map((choice, index) => (
@@ -21,6 +21,6 @@ function ChoicePicker({ choiceList, setPicked, picked }: Props) {
       ))}
     </ul>
   );
-}
+};
 
 export default ChoicePicker;

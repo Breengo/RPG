@@ -1,6 +1,13 @@
 import { CLASSES, CharStats, Class, RACES, Race } from "../data";
 
 class Character {
+  name: String = "Name";
+
+  pClass = CLASSES[0];
+  race = RACES[0];
+
+  LVL = 1;
+
   agile = 10;
   strength = 10;
   intelligence = 10;
@@ -12,10 +19,8 @@ class Character {
   hpRegen = 10;
   manaRegen = 10;
 
-  pClass = CLASSES[0];
-  race = RACES[0];
-
-  constructor(pClass: Class, Race: Race) {
+  constructor(pClass: Class, Race: Race, name?: String) {
+    if (name) this.name = name;
     this.pClass = pClass;
     this.race = Race;
     for (const key in this.pClass.bonus) {

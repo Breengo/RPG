@@ -1,13 +1,15 @@
 import CharacterContainer from "./components/CharacterContainer";
 import CreateCharacter from "./components/CreateCharacter";
+import CharactersStore from "../../store/CharsStore";
 import styles from "./styles.module.scss";
 
 function Characters() {
+  const chars = CharactersStore.charList;
   return (
     <div className={styles.table}>
-      <CharacterContainer />
-      <CharacterContainer />
-      <CharacterContainer />
+      {chars.map((charData, index) => (
+        <CharacterContainer data={charData} key={index} />
+      ))}
       <CreateCharacter />
     </div>
   );
