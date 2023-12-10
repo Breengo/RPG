@@ -5,8 +5,11 @@ import { observer } from "mobx-react-lite";
 import { useNavigate } from "react-router-dom";
 import CharsStore from "../../store/CharsStore";
 import CreationStore from "../../pages/CharacterCreation/store/CreationStore";
+import React from "react";
 
 const CharacterOptions = observer(() => {
+  const [error, setError] = React.useState("");
+
   const creatStore = CreationStore;
   const charData = CreationStore.getData();
   const charsStore = CharsStore;
@@ -14,6 +17,12 @@ const CharacterOptions = observer(() => {
   const navigate = useNavigate();
 
   function onCreation() {
+    setError("");
+    const alreadyExists = charsStore.charList.find(
+      (char) => char.name === charData.name
+    );
+    if (alreadyExists) return setError("This name already taken");
+    if (charData.name === "") return setError("Fill name field");
     charsStore.createChar(charData.pClass, charData.race, charData.name);
     navigate("/");
   }
@@ -27,6 +36,7 @@ const CharacterOptions = observer(() => {
           className={styles.nameInput}
           type="text"
         />
+        <p className={styles.error}>{error}</p>
       </div>
 
       <div className={styles.propertyContainer}>

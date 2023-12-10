@@ -1,7 +1,7 @@
 import { CLASSES, CharStats, Class, RACES, Race } from "../data";
 
 class Character {
-  name: String = "Name";
+  name: String = "";
 
   pClass = CLASSES[0];
   race = RACES[0];

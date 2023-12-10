@@ -1,0 +1,15 @@
+@import "@/vars.css";
+
+.container {
+  width: 220px;
+  height: 430px;
+  border: 2px solid var(--additional-color1);
+  padding: 10px;
+  border-radius: 5px;
+  font-size: var(--text-main);
+  color: var(--text-color);
+  justify-self: end;
+  span {
+    color: var(--text-important);
+  }
+}
