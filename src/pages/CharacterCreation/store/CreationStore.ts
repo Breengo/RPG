@@ -2,7 +2,7 @@ import { makeAutoObservable } from "mobx";
 import { CLASSES, Class, RACES, Race } from "../../../data";
 import Character from "../../../helpers/Character";
 
-class CreationStore {
+class creationStore {
   class: Class = CLASSES[0];
   race: Race = RACES[0];
   name: string = "";
@@ -28,4 +28,4 @@ class CreationStore {
   }
 }
 
-export default new CreationStore();
+export default new creationStore();

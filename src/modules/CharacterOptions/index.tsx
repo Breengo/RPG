@@ -3,8 +3,8 @@ import styles from "./styles.module.scss";
 import { CLASSES, RACES } from "../../data";
 import { observer } from "mobx-react-lite";
 import { useNavigate } from "react-router-dom";
-import CharsStore from "../../store/CharsStore";
-import CreationStore from "../../pages/CharacterCreation/store/CreationStore";
+import CharsStore from "../../store/charsStore";
+import CreationStore from "../../pages/CharacterCreation/store/creationStore";
 import React from "react";
 
 const CharacterOptions = observer(() => {

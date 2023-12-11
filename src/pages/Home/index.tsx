@@ -1,12 +1,13 @@
 import styles from "./styles.module.scss";
 import CharacterInfo from "../../modules/CharacterInfo";
-import WorldMap from "../../modules/WorldMap";
+import BattleInfo from "../../modules/BattleInfo";
+import EnemyInfo from "../../modules/EnemyInfo";
 
 const Home = () => {
   return (
     <div className={styles.page}>
-      <div></div>
-      <WorldMap />
+      <EnemyInfo />
+      <BattleInfo />
       <CharacterInfo />
     </div>
   );

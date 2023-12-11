@@ -5,6 +5,18 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  &::-webkit-scrollbar {
+    width: 20px;
+  }
+
+  &::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px var(--additional-color1);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: var(--additional-color1);
+    border-radius: 5px;
+  }
 }
 
 main {

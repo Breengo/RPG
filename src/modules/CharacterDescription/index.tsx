@@ -1,6 +1,6 @@
 import { observer } from "mobx-react-lite";
 import styles from "./styles.module.scss";
-import CreationStore from "../../pages/CharacterCreation/store/CreationStore";
+import CreationStore from "../../pages/CharacterCreation/store/creationStore";
 
 const CharacterDescription = observer(() => {
   const data = CreationStore.getData();

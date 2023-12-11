@@ -1,25 +1,25 @@
 const RACES: Race[] = [
   {
     name: "Dwarf",
-    bonus: { agile: -2, stamina: 2, HP: 30 },
+    bonus: { agile: -2, stamina: 2, maxHP: 30 },
     description:
       "The bold and courageous dwarves are an ancient race descended from the earthen—titan-forged beings of living stone created when the world was young. Hailing from the mighty city of Ironforge in the snowy peaks of Khaz Modan, dwarves are courageous defenders of the Alliance.",
   },
   {
     name: "Human",
-    bonus: { intelligence: 2, stamina: 2, mana: 20 },
+    bonus: { intelligence: 2, stamina: 2, maxMana: 20 },
     description:
       "The noble humans of Stormwind are a proud, tenacious race. They bravely fought the orcish Horde for generations as the patrons of the Grand Alliance. Just as they thought peace had at last settled over their war-torn kingdoms, an even darker shadow descended upon the world.",
   },
   {
     name: "Elf",
-    bonus: { agile: 5, stamina: 2, HP: -20 },
+    bonus: { agile: 5, stamina: 2, maxHP: -20 },
     description:
       "An elf is a long-lived humanoid species native to Azeroth known for keen perception, grace, and great spellwork. They are one of the longest-lived species on Azeroth. The specific origins of elves remained lost to history for millennia, until Brann Bronzebeard confirmed that the first elves were originally dark trolls that were transformed by the Well of Eternity.",
   },
   {
     name: "Orc",
-    bonus: { strength: 5, agile: -6, HP: 30 },
+    bonus: { strength: 5, agile: -6, maxHP: 30 },
     description:
       "Orcs are of human shape, and of varying size. They are depicted as ugly and filthy, with a taste for human flesh. They are fanged, bow-legged and long-armed. Most are small and avoid daylight.",
   },
@@ -120,8 +120,8 @@ type CharStats = {
   armor?: number;
   stamina?: number;
   accuracy?: number;
-  HP?: number;
-  mana?: number;
+  maxHP?: number;
+  maxMana?: number;
   hpRegen?: number;
   manaRegen?: number;
 };

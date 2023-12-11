@@ -14,8 +14,8 @@ class Character {
   armor = 10;
   stamina = 10;
   accuracy = 10;
-  HP = 100;
-  mana = 100;
+  maxHP = 100;
+  maxMana = 100;
   hpRegen = 10;
   manaRegen = 10;
 

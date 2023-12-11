@@ -7,4 +7,7 @@
   --text-important: #daa21c;
   --text-main: 24px;
   --text-secondary: 20px;
+  --health-color: #ff425b;
+  --mana-color: #5431e0;
+  --exp-color: #8cdb1d;
 }

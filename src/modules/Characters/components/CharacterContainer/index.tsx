@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import Character from "../../../../helpers/Character";
 import styles from "./styles.module.scss";
-import CharsStore from "../../../../store/CharsStore";
+import CharsStore from "../../../../store/charsStore";
 
 interface Props {
   data: Character;

@@ -2,7 +2,7 @@ import { makeAutoObservable } from "mobx";
 import { Class, Race } from "../data";
 import Character from "../helpers/Character";
 
-class CharsStore {
+class charsStore {
   charList: Character[] = [];
   currentChar: number = 0;
 
@@ -29,4 +29,4 @@ class CharsStore {
   }
 }
 
-export default new CharsStore();
+export default new charsStore();

@@ -1,15 +1,50 @@
 @import "@/vars.css";
 
 .container {
-  width: 220px;
-  height: 430px;
-  border: 2px solid var(--additional-color1);
-  padding: 10px;
-  border-radius: 5px;
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
   font-size: var(--text-main);
   color: var(--text-color);
   justify-self: end;
+  gap: 10px;
   span {
     color: var(--text-important);
   }
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--additional-color1);
+  border-radius: 5px;
+  p {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+  }
+}
+
+.health {
+  background-color: var(--health-color);
+  border-top: 2px solid var(--additional-color1);
+}
+
+.mana {
+  border-top: 2px solid var(--additional-color1);
+  background-color: var(--mana-color);
+}
+
+.exp {
+  background-color: var(--exp-color);
+}
+
+.stats {
+  border: 2px solid var(--additional-color1);
+  padding: 10px;
+  border-radius: 5px;
 }
